@@ -1,0 +1,116 @@
+.search {
+  @include absoluteCenterY();
+  right: 0;
+  width: 47px;
+  height: 40px;
+  z-index: 2;
+  background: #fff;
+  border-width: 0.5px;
+  border-color: rgb(34, 34, 34);
+  border-style: solid;
+  border-radius: 2px;
+  transition: width .3s ease-in-out;
+
+  &.open {
+    width: 245px;
+
+    .search__btn {
+      opacity: 1;
+      transform: translate(-47px, 0);
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 47px;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    background: rgb(34, 34, 34);
+    transition: transform .3s ease-in-out;
+
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 10px;
+      height: 10px;
+      transform: translate(-50%,-50%) rotate(45deg);
+      border: 2px solid #fff;
+      border-width: 2px 2px 0 0;
+      content: '';
+    }
+  }
+
+  input[type=search] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 62px);
+    height: 100%;
+    padding: 0 20px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: rgb(68, 68, 68);
+    line-height: 1.2;
+    text-align: left;
+    @include frutigerltstd-bold();
+  }
+
+  button[type=submit] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 47px;
+    height: 100%;
+    border: none;
+    background: none;
+
+    svg {
+      @include absoluteCenter();
+      width: 20px;
+      height: 20px;
+      fill: rgb(34, 34, 34);
+      transition: fill .3s ease-in-out;
+    }
+
+    &:hover {
+
+      svg { fill: rgb(68, 173, 226) }
+    }
+  }
+}
+@media (min-width: $phone-landscape) {
+  .search {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .search {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .search {
+    position: relative;
+    width: 250px;
+    transform: translate(0,0);
+
+    &__btn {
+      display: none;
+    }
+
+    button[type=submit] {
+      width: 62px;
+    }
+  }
+}
+@media (min-width: $desktop) {
+  .search {
+
+  }
+}
+

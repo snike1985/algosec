@@ -1,0 +1,94 @@
+.birthdays {
+  margin-bottom: 29px;
+  padding: 19px 18px;
+  border-width: 1px;
+  border-color: rgb(153, 153, 153);
+  border-style: solid;
+
+  &__list {
+    padding: 10px 0 0 10px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    &:last-child { margin: 0 }
+
+    &:hover {
+
+      .birthdays__content {
+
+        dt,
+        dd { color: rgb(68, 173, 226) }
+      }
+
+      .birthdays__image { opacity: .8 }
+    }
+  }
+
+  &__image {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: opacity .3s ease-in-out;
+  }
+
+  &__content {
+    width: calc(100% - 50px);
+
+    dl {
+
+      dt {
+        display: inline;
+        font-size: 14px;
+        color: rgb(34, 34, 34);
+        line-height: 1.2;
+        transition: color .3s ease-in-out;
+        @include Calibri-bold();
+      }
+
+      dd {
+        display: inline;
+        font-size: 14px;
+        color: rgb(68, 68, 68);
+        line-height: 1.2;
+        transition: color .3s ease-in-out;
+      }
+    }
+  }
+
+  &__title {
+    display: block;
+    font-size: 16px;
+    color: rgb(68, 173, 226);
+    line-height: 1.2;
+    @include frutigerltstd-bold();
+  }
+}
+@media (min-width: $phone-landscape) {
+  .birthdays {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .birthdays {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .birthdays {
+
+  }
+}
+@media (min-width: $desktop) {
+  .birthdays {
+
+  }
+}
+

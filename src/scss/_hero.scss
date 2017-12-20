@@ -1,0 +1,59 @@
+.hero {
+  padding: 20px;
+  margin-bottom: 20px;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  font-size: 18px;
+  line-height: 1.2;
+  text-shadow: 0.5px 0.866px 3px rgba(0, 0, 0, 0.45);
+  text-align: center;
+
+  &__title {
+    display: block;
+    margin: 0 0 11px -4px;
+    font-size: 26px;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-shadow: 0.5px 0.866px 3px rgba(0, 0, 0, 0.45);
+    @include frutigerltstd-bold();
+  }
+
+  p {
+    margin-bottom: 41px;
+  }
+}
+@media (min-width: $phone-landscape) {
+  .hero {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .hero {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .hero {
+
+  }
+}
+@media (min-width: $desktop) {
+  .hero {
+    padding: 75px 80px 71px;
+    margin-bottom: 0;
+    font-size: 24px;
+    text-align: left;
+
+    &__title {
+      font-size: 48px;
+    }
+
+    p {
+      max-width: 760px;
+    }
+  }
+}
+

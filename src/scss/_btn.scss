@@ -1,0 +1,45 @@
+.btn,
+a.btn,
+button.btn {
+  display: inline-block;
+  min-width: 128px;
+  padding: 14px 54px;
+  text-align: center;
+  background-color: #44ade2;
+  transition: background .3s ease-in-out;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.2;
+  @include Calibri-bold();
+
+  &:hover,
+  &.active {
+    background-color: #a6cd39;
+  }
+
+  &:active {
+    background-color: #a6cd39;
+  }
+
+  &_min {
+    font-size: 12px;
+    letter-spacing: .6px;
+    padding: 11px 20px;
+  }
+
+  &_icon {
+    display: inline-flex;
+    align-items: baseline;
+
+    svg {
+      position: relative;
+      top: 1px;
+      width: 10px;
+      height: 10px;
+      margin-left: 10px;
+      fill: #fff;
+    }
+  }
+}

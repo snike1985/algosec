@@ -1,0 +1,107 @@
+.employees {
+  margin-bottom: 30px;
+
+  .swiper-container {
+    height: calc(100vw - 30px);
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    overflow: hidden;
+    top: auto;
+    bottom: 70px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    background: none;
+    border-radius: 50%;
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      fill: #fff;
+      transition: fill .3s ease-in-out;
+    }
+
+    &:hover {
+
+      svg { fill: rgb(68, 173, 226) }
+    }
+  }
+
+  .swiper-button-prev {
+    right: 33px;
+    left: auto;
+    transform: matrix(-1,0,0,1,0,0);
+  }
+
+  &__info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 60px;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    background-color: rgba(68, 173, 226, .8);
+    box-shadow: 0.052px -0.999px 3px 0px rgba(0, 0, 0, 0.45);
+    @include frutigerltstd-roman();
+
+
+    strong {
+      display: block;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      font-size: 16px;
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+      line-height: 1.2;
+      @include frutigerltstd-bold();
+    }
+
+    span {
+      display: block;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}
+@media (min-width: $phone-landscape) {
+  .employees {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .employees {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .employees {
+
+    .swiper-container {
+      height: 295px;
+    }
+  }
+}
+@media (min-width: $desktop) {
+  .employees {
+
+  }
+}
+
